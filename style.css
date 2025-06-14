@@ -60,8 +60,8 @@ body {
 }
 
 .assessment-section ol {
-  padding-left: 40px; /* ensures the list doesn't squish horizontally */
-  max-width: 100%; /* allows it to span full section width */
+  padding-left: 40px;
+  max-width: 100%;
   box-sizing: border-box;
   word-wrap: break-word;
 }
@@ -138,7 +138,7 @@ body {
 
 .time-button {
   display: inline-block;
-  background-color: #007acc; /* match nav button color */
+  background-color: #007acc; 
   color: white;
   padding: 0.6rem 1.2rem;
   border-radius: 20px;
