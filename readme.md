@@ -15,7 +15,7 @@ The site includes:
 Technologies Used
 
 - HTML5
-- CSS3 (external stylesheet only — no inline styles)
+- CSS3 (external stylesheet only and no inline styles)
 - JavaScript (vanilla)
 - Git + GitHub for version control
 - Netlify for deployment
