@@ -16,9 +16,102 @@
     </nav>
   </header>
 
+<section class="assessment-section">
+    <p><strong>Question 1:</strong> Talk about how you made your site and why you chose the tools you did. Briefly explain one challenge you experienced in setting up this site and how you overcame it.</p>
+    <p><strong>Answer:</strong> I mainly used basic setups like HTML, CSS, and vanilla JavaScript. Even though these three are the most fundamental tools, I made sure to apply best practices such as clean coding and using an external CSS stylesheet instead of inline styles. One challenge I experienced was getting familiar with the platform. It was actually my first time using Netlify, so I had to read through the documentation to understand the deployment process.</p>
+</section>
+<section class="assessment-section">
+    <p><strong>Question 2:</strong> What did you think of our service during the time you used it? Provide some constructive criticism or some features that impressed you.</p>
+    <p><strong>Answer:</strong> It was actually very intuitive to use! When I linked my GitHub repository, it deployed right away, which was great. The UI feels familiar similar to how technical platforms work so it was easy to navigate. I haven't experienced any issues so far, so I can’t provide constructive feedback yet, but I’ll be sure to share if I encounter anything in the future.</p>
+</section>
+<section class="assessment-section">
+  <p><strong>Question 3:</strong> Rank your 5 favorite and 5 least favorite activities from this list: 
+    <a href="https://gist.github.com/laurajodz/592402a6336410377dee1a744af846ab" target="_blank">View the list</a>
+  </p>
+  <p><strong>Answer:</strong></p>
+  <p>Here are my top 5 favorite activities:</p>
+  <ol>
+    <li>Create video tutorials to help teach users a specific feature or use case</li>
+    <li>Engage multiple users at once via chat to answer their questions and troubleshoot problems</li>
+    <li>Work with prospective customers to explain our service and the pricing model</li>
+    <li>Work with a customer to figure out if Netlify's service can solve a particular workflow or integration challenge they have</li>
+    <li>Suggest and champion improvements to the Support team's workflow</li>
+  </ol>
+
+  <p>And here are my 5 least favorite (if I really had to choose):</p>
+  <ol>
+    <li>Set up your own copy of several site frameworks for debugging</li>
+    <li>Manage a Support team</li>
+    <li>Debug a customer's build using a programming language and framework that you've never seen before</li>
+    <li>Develop a code example to share with a customer</li>
+    <li>Write and maintain Support Guides for our product</li>
+  </ol>
+
+  <p>To be clear, I'm open to doing all of these but if I had to rank them, this would be my honest list.</p>
+</section>
+<section class="assessment-section">
+    <p><strong>Question 4:</strong> Provide a link to documentation for a technical/developer-focused product, which you think are well done, and explain why you think they are well done.</p>
+    <p><strong>Answer:</strong> I find the React.js documentation to be one of the most well-done technical resources out there. It's very accessible to both new and experienced developers. For starters, it provides a clear installation guide with helpful visual aids that make setup easy to follow. Beyond that, it includes practical examples of how to use the framework, which adds a lot of value for someone trying to learn or apply it in real-world scenarios. Another thing I appreciate is how the documentation links out to related resources like blogs, community forums, and API references all organized in a way that’s easy to explore. It even has update logs available, which are useful if you want to check for changes that might affect specific packages. Overall, it feels very user-centric, thoughtfully designed, and easy to navigate, all of which make learning React a much smoother experience.</p>
+</section>
+<section class="assessment-section">
+  <p><strong>Question 5:</strong> Explain, in a couple of paragraphs, what you think are two major challenges around DNS configuration for less-technical customers hosting websites.</p>
+  <p><strong>Answer:</strong> For me, one of the major challenges around DNS configuration for less-technical users is understanding that DNS settings consist of various record types, each serving a different purpose. It can get confusing because there are so many types, and the names don’t always give a clear idea of what they do. For instance, an “A record” might not intuitively sound like it’s related to pointing a domain to an IP address, but that’s essentially what it does.</p>
+  <p>The second challenge is the assumption that website hosting platforms automatically manage everything, including DNS settings. Many users think that once their site is deployed to a server, that same server also controls their DNS but in reality, DNS records are typically managed where the domain was purchased. It’s a common misconception, and explaining that separation can be difficult for someone who’s never handled domain configurations before.</p>
+</section>
+<section class="assessment-section">
+  <p><strong>Question 6:</strong> A customer writes in to Support saying simply that their “site won’t build”. You have access to their build logs, and there you see this error: Build failed due to a user error: Build script returned non-zero exit code: 2. You have no more information than this and the site’s source repository is private so you cannot test the build yourself. How would you troubleshoot this issue? What steps would you take? Also, please compose your best customer-facing first response.</p>
+  
+  <p><strong>Answer:</strong> First, I would acknowledge the customer's frustration and ensure they feel supported. Even though the error might be coming from their code, it’s important to show empathy and assure them we’re actively looking into it. I’d begin by checking the build logs in detail to identify any specific file paths, failed scripts, or package manager errors that may have triggered the exit code 2. Although I can’t test the build myself, I would provide the customer with common causes of this type of error such as missing dependencies, incorrect script paths, or syntax issues and ask guided questions to narrow things down.</p>
+  
+  <p>Next, I’d request access to a minimal reproducible example or ask them to share the specific build command and configuration they're using in their setup. That way, we can offer more targeted help without needing full repository access.</p>
+  
+  <p>I'll send this message too while troubleshooting:</p>
+  
+  <p>
+    Hi!,<br>
+    Thanks for reaching out! We’re currently reviewing your build issue and noticed that the build is failing due to a script returning a non-zero exit code: 2. This typically indicates that something in your build command might be exiting with an error.<br><br>
+    While we don’t have access to your source repository to run the build ourselves, here are a few things that might help you get started:
+    <ul>
+      <li>Check your build scripts for typos or missing files.</li>
+      <li>Make sure all necessary dependencies are listed and installed.</li>
+      <li>Review any recent changes to see if something broke the build process.</li>
+    </ul>
+    If you could share your build command or any recent updates made to your project, we’d be happy to take a closer look and help guide you through it.<br><br>
+    Looking forward to helping you get this resolved!<br><br>
+    Best regards,<br>
+    Wyman
+  </p>
+</section>
+<section class="assessment-section">
+  <p><strong>Question 7:</strong> How would you set up an http 301 status redirect from “/netlify/anything” on your site, to https://www.google.com/search?q=anything. Please provide the redirect formatting here. Now, how about a proxy redirect? Please add that proxy redirect rule directly to your site. (Please add the proxy redirect to your website!)</p>
+
+  <p><strong>Answer:</strong> I used the <code>netlify.toml</code> file to configure both redirects. This file is located in the root of my project and is automatically picked up by Netlify during deployment. It’s the simplest and most native way to handle redirects on a Netlify-hosted static site.</p>
+
+  <p>To set up the required 301 redirect from <code>/netlify/anything</code> to Google Search, I added the following rule:</p>
+
+  <pre><code>[[redirects]]
+from = "/netlify/anything"
+to = "https://www.google.com/search?q=anything"
+status = 301
+force = true
+</code></pre>
+
+  <p>This means that any visit to <code>/netlify/anything</code> will result in a permanent redirect (HTTP 301) to the exact Google Search URL with the word "anything" as the search term. I used <code>force = true</code> to ensure it overrides any existing file with that name in my build.</p>
+
+  <p>For the proxy redirect, I used a public test API that allows proxying, because Google Search does not support being proxied (it blocks such requests with CORS and security protections). Here's the working proxy redirect I added:</p>
+
+<pre><code>[[redirects]]
+from = "/proxy-posts"
+to = "https://jsonplaceholder.typicode.com/posts"
+status = 200
+</code></pre>
+
+  <p>This basically allows me to demonstrate a working 200 redirect. Both redirects are managed in netlify.toml for simplicity and maintainability.</p>
+</section>
+
   <div class="centered-content">
     <button class="toggle-button">Show Message</button>
-    <p id="toggle-text" class="toggle-text">I wanted to add this button just to showcase basic event listeners for Javascript. Don't mind me</p>
+    <p id="toggle-text" class="toggle-text">I wanted to add this button just to showcase basic event listeners for Javascgript. Don't mind me</p>
   </div>
 
   <footer class="site-footer">
