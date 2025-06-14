@@ -113,14 +113,25 @@ status = 200
     <p><strong>Answer:</strong> I deployed a basic Netlify Function that dynamically returns the server's current date and time. I followed the typical Netlify function setup by creating a netlify/functions folder in my project directory, and inside that, I added a clock.js. Then in my index.html, I wrote a small JavaScript function that fetches the time from the deployed endpoint at /.netlify/functions/clock and displays it inside. When I pushed this setup to GitHub and connected it to Netlify, the function deployed automatically and no extra configuration was needed beyond the netlify.toml. At first, I saw “Failed to load time” in the browser, which made me realize the function might not have been recognized yet. Once deployed, everything worked smoothly. The function displayed the correct server time on the live site, confirming that the function was properly deployed and the frontend was receiving it. This process gave me hands-on experience setting up and troubleshooting serverless functions using Netlify’s native integration, and I’d feel confident implementing more dynamic features this way in the future.</p>
 </section>
 <section class="assessment-section">
-  <p><strong>Question 9:</strong>We understand you don't know anything about our internal procedures at this stage, but we want you to explain at a high level how you'd react to this situation: You receive a report of a severe security issue on www.netlify.com. You can't immediately confirm the report, so what steps might you take to investigate or substantiate the report? What might you say to the reporter, even though we haven't confirmed their assertion yet, that will instill confidence that our business is very concerned about security? You believe there is a reasonable chance the report is correct and the problem is very large and impactful. How might you escalate?
-</p>
+  <p><strong>Question 9:</strong> We understand you don't know anything about our internal procedures at this stage, but we want you to explain at a high level how you'd react to this situation: You receive a report of a severe security issue on www.netlify.com. You can't immediately confirm the report, so what steps might you take to investigate or substantiate the report? What might you say to the reporter, even though we haven't confirmed their assertion yet, that will instill confidence that our business is very concerned about security? You believe there is a reasonable chance the report is correct and the problem is very large and impactful. How might you escalate?</p>
 
   <p><strong>Answer:</strong> First, I’d thank the reporter and let them know we take security very seriously. Even without confirming the issue yet, I’d reassure them that it’s being reviewed by the appropriate team and that we appreciate them flagging it.</p>
 
   <p>I’d then try to reproduce the issue using the details they provided, check any relevant logs if I had access, and gather as much context as possible to better understand the scope. Since it seems impactful, I’d escalate right away to the Security or Engineering team, including all the details from the report and what I’ve found so far.</p>
 
   <p>Throughout the process, I’d keep the reporter updated, even just to let them know the issue is still being reviewed. I think clear, respectful communication goes a long way in showing we care and take this seriously.</p>
+
+  <p>Here's what I'll reply to the reporter:</p>
+
+  <blockquote>
+    Hi,<br><br>
+    Thank you for reaching out and for taking the time to report this issue. We take all security concerns extremely seriously, and your report has our full attention.<br><br>
+    Although we haven’t yet confirmed the details on our end, we understand the potential impact of the issue you described and are treating it as a priority. Our internal teams are currently reviewing the information you provided to assess and validate the situation thoroughly.<br><br>
+    In the meantime, if you have any additional context, logs, or reproduction steps that might help speed up our investigation, we’d greatly appreciate it. We’ll keep you updated on our progress and will follow up as soon as we have more information.<br><br>
+    We value responsible disclosure and your help in keeping our platform and users secure. Thank you again for bringing this to our attention.<br><br>
+    Best regards,<br>
+    Wyman
+  </blockquote>
 </section>
 </div>
 
