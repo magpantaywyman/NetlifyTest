@@ -9,6 +9,12 @@ body {
   box-sizing: inherit;
 }
 
+.responsive-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
 .site-header {
   background-color: #f8f8f8;
   padding: 30px 20px;
@@ -43,14 +49,15 @@ body {
 }
 
 .assessment-section {
-  margin:20px;
-  max-width: 700px;
-  padding: 20px;
+  margin: 40px auto;
+  max-width: 1500px;
+  padding: 30px;
   background-color: #f0f0f0;
   border-radius: 15px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   text-align: justify;
   color: #333;
+  box-sizing: border-box;
 }
 
 .assessment-section h2 {
