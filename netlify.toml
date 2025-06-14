@@ -1,0 +1,10 @@
+[[redirects]]
+from = "/netlify/anything"
+to = "https://www.google.com/search?q=anything"
+status = 301
+force = true
+
+[[redirects]]
+from = "/proxy-posts"
+to = "https://jsonplaceholder.typicode.com/posts"
+status = 200
