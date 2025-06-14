@@ -85,9 +85,9 @@
 <section class="assessment-section">
   <p><strong>Question 7:</strong> How would you set up an http 301 status redirect from “/netlify/anything” on your site, to https://www.google.com/search?q=anything. Please provide the redirect formatting here. Now, how about a proxy redirect? Please add that proxy redirect rule directly to your site. (Please add the proxy redirect to your website!)</p>
 
-  <p><strong>Answer:</strong> I used the <code>netlify.toml</code> file to configure both redirects. This file is located in the root of my project and is automatically picked up by Netlify during deployment. It’s the simplest and most native way to handle redirects on a Netlify-hosted static site.</p>
+  <p><strong>Answer:</strong> I basically used the netlify.toml file to configure both redirects. This file is located in the main directory of my project together with the base files and is automatically picked up by Netlify during deployment. It’s the simplest and most native way to handle redirects on a Netlify-hosted static site without using other dependencies in my opinion.</p>
 
-  <p>To set up the required 301 redirect from <code>/netlify/anything</code> to Google Search, I added the following rule:</p>
+  <p>To set up the required 301 redirect from /netlify/anything to Google Search, I added the following rule:</p>
 
   <pre><code>[[redirects]]
 from = "/netlify/anything"
@@ -96,7 +96,7 @@ status = 301
 force = true
 </code></pre>
 
-  <p>This means that any visit to <code>/netlify/anything</code> will result in a permanent redirect (HTTP 301) to the exact Google Search URL with the word "anything" as the search term. I used <code>force = true</code> to ensure it overrides any existing file with that name in my build.</p>
+  <p>This means that any visit to /netlify/anything will result in a permanent redirect (HTTP 301) to the exact Google Search URL with the word "anything" as the search term. I used force = true to ensure it overrides any existing file with that name in my build.</p>
 
   <p>For the proxy redirect, I used a public test API that allows proxying, because Google Search does not support being proxied (it blocks such requests with CORS and security protections). Here's the working proxy redirect I added:</p>
 
@@ -108,11 +108,19 @@ status = 200
 
   <p>This basically allows me to demonstrate a working 200 redirect. Both redirects are managed in netlify.toml for simplicity and maintainability.</p>
 </section>
+<section class="assessment-section">
+    <p><strong>Question 8:</strong> Please attempt to deploy a <a href="https://docs.netlify.com/functions/get-started/?fn-language=ts">function</a> on our service. This need not be complicated. It could be "Hello World". Note that failure to deploy is not failing the exercise! Whether you have trouble or not, please describe what you experienced and how you attempted to troubleshoot any issues you encountered.</p>
+    <p><strong>Answer:</strong> I deployed a basic Netlify Function that dynamically returns the server's current date and time. I followed the typical Netlify function setup by creating a netlify/functions folder in my project directory, and inside that, I added a clock.js. Then in my index.html, I wrote a small JavaScript function that fetches the time from the deployed endpoint at /.netlify/functions/clock and displays it inside. When I pushed this setup to GitHub and connected it to Netlify, the function deployed automatically and no extra configuration was needed beyond the netlify.toml. At first, I saw “Failed to load time” in the browser, which made me realize the function might not have been recognized yet. Once deployed, everything worked smoothly. The function displayed the correct server time on the live site, confirming that the function was properly deployed and the frontend was receiving it. This process gave me hands-on experience setting up and troubleshooting serverless functions using Netlify’s native integration, and I’d feel confident implementing more dynamic features this way in the future.</p>
+</section>
 
-  <div class="centered-content">
-    <button class="toggle-button">Show Message</button>
-    <p id="toggle-text" class="toggle-text">I wanted to add this button just to showcase basic event listeners for Javascgript. Don't mind me</p>
-  </div>
+ <div class="centered-content">
+  <button class="toggle-button">I'm a Useless Button</button>
+  <p id="toggle-text" class="toggle-text">I wanted to add this button just to showcase basic event listeners for Javascript. Don't mind me</p>
+</div>
+
+<div id="server-time">
+  <p class="time-button">Server Time: <span id="time-display">Loading...</span></p>
+</div>
 
   <footer class="site-footer">
     <p>For Netlify Testing Purposes Only</p>
