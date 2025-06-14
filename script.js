@@ -14,3 +14,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("/.netlify/functions/time")
+    .then((res) => res.json())
+    .then((data) => {
+      const display = document.getElementById("time-display");
+      if (display) display.textContent = data.time;
+    })
+    .catch((err) => {
+      const display = document.getElementById("time-display");
+      if (display) display.textContent = "Failed to load time.";
+      console.error(err);
+    });
+});
