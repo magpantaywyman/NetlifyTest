@@ -1,6 +1,6 @@
 # Netlify Test Website
 
-This is a simple static website created by **Wyman Magpantay** for Netlify deployment testing purposes.
+This is a simple static website created by me (**Wyman Magpantay**) for Netlify deployment testing purposes.
 
 Project Overview
 
