@@ -31,18 +31,18 @@
   <p><strong>Answer:</strong></p>
   <p>Here are my top 5 favorite activities:</p>
   <ol>
-    <li>Create video tutorials to help teach users a specific feature or use case</li>
+    <li>Respond to 20+ support requests via email every day</li>
     <li>Engage multiple users at once via chat to answer their questions and troubleshoot problems</li>
-    <li>Work with prospective customers to explain our service and the pricing model</li>
-    <li>Work with a customer to figure out if Netlify's service can solve a particular workflow or integration challenge they have</li>
-    <li>Suggest and champion improvements to the Support team's workflow</li>
+    <li>Dig through server logs to troubleshoot a customer's website behavior</li>
+    <li>Debug a customer's build using a programming language and framework that you've never seen before</li>
+    <li>Write and maintain Support Guides for our product</li>
   </ol>
 
   <p>And here are my 5 least favorite (if I really had to choose):</p>
   <ol>
     <li>Set up your own copy of several site frameworks for debugging</li>
     <li>Manage a Support team</li>
-    <li>Debug a customer's build using a programming language and framework that you've never seen before</li>
+    <li>Submit bug reports and potentially bug fixes</li>
     <li>Develop a code example to share with a customer</li>
     <li>Write and maintain Support Guides for our product</li>
   </ol>
@@ -110,7 +110,7 @@ status = 200
 </section>
 <section class="assessment-section">
     <p><strong>Question 8:</strong> Please attempt to deploy a <a href="https://docs.netlify.com/functions/get-started/?fn-language=ts">function</a> on our service. This need not be complicated. It could be "Hello World". Note that failure to deploy is not failing the exercise! Whether you have trouble or not, please describe what you experienced and how you attempted to troubleshoot any issues you encountered.</p>
-    <p><strong>Answer:</strong> I deployed a basic Netlify Function that dynamically returns the server's current date and time. I followed the typical Netlify function setup by creating a netlify/functions folder in my project directory, and inside that, I added a clock.js. Then in my index.html, I wrote a small JavaScript function that fetches the time from the deployed endpoint at /.netlify/functions/clock and displays it inside. When I pushed this setup to GitHub and connected it to Netlify, the function deployed automatically and no extra configuration was needed beyond the netlify.toml. At first, I saw “Failed to load time” in the browser, which made me realize the function might not have been recognized yet. Once deployed, everything worked smoothly. The function displayed the correct server time on the live site, confirming that the function was properly deployed and the frontend was receiving it. This process gave me hands-on experience setting up and troubleshooting serverless functions using Netlify’s native integration, and I’d feel confident implementing more dynamic features this way in the future.</p>
+    <p><strong>Answer:</strong> I deployed a basic Netlify Function that dynamically returns the server's current date and time. I followed the typical Netlify function setup by creating a netlify/functions folder in my project directory, and inside that, I added a time.js. Then in my index.html, I wrote a small JavaScript function that fetches the time from the deployed endpoint at /.netlify/functions/time.js and displays it inside. When I pushed this setup to GitHub and connected it to Netlify, the function deployed automatically and no extra configuration was needed beyond the netlify.toml. At first, I saw “Failed to load time” in the browser, which made me realize the function might not have been recognized yet. Once deployed, everything worked smoothly. The function displayed the correct server time on the live site, confirming that the function was properly deployed and the frontend was receiving it. This process gave me hands-on experience setting up and troubleshooting serverless functions using Netlify’s native integration, and I’d feel confident implementing more dynamic features this way in the future.</p>
 </section>
 <section class="assessment-section">
   <p><strong>Question 9:</strong> We understand you don't know anything about our internal procedures at this stage, but we want you to explain at a high level how you'd react to this situation: You receive a report of a severe security issue on www.netlify.com. You can't immediately confirm the report, so what steps might you take to investigate or substantiate the report? What might you say to the reporter, even though we haven't confirmed their assertion yet, that will instill confidence that our business is very concerned about security? You believe there is a reasonable chance the report is correct and the problem is very large and impactful. How might you escalate?</p>
